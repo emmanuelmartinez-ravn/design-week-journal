@@ -1,0 +1,129 @@
+/* ============================================================
+   VELLO · COLOR TOKENS
+   Cozy, literary, neighborhood-grounded (Fable-inspired).
+   Warm cream paper + deep forest brand + olive/moss primary
+   action + persimmon accent + amber for ratings.
+   ============================================================ */
+
+:root {
+  /* ---- Neutrals (warm cream + near-black ink) ---- */
+  --ink-900: #1B1C18; /* primary text, near-black buttons */
+  --ink-800: #292A24;
+  --ink-700: #3D3F37; /* body text */
+  --ink-600: #54564C;
+  --ink-500: #6E7064; /* secondary text */
+  --ink-400: #8D8F80; /* muted / placeholder */
+  --ink-300: #B6B7A6;
+  --ink-200: #D6D6C6; /* strong borders */
+  --ink-150: #E5E4D6; /* default borders */
+  --ink-100: #EFEEE1; /* hairlines, sunken fills */
+  --paper:   #F6F2E7; /* app background — warm Fable cream */
+  --paper-2: #EFEADB; /* deeper cream section band */
+  --white:   #FFFFFF;
+
+  /* ---- Forest (deep brand green: splash, hero, dark surfaces) ---- */
+  --forest-900: #0E3A28;
+  --forest-800: #16462F; /* splash / hero field */
+  --forest-700: #1D5337;
+  --forest-600: #266B49;
+  --forest-300: #8FB6A2;
+  --forest-100: #DCE9E1;
+
+  /* ---- Green = olive / moss (PRIMARY action, selected, tints) ---- */
+  --green-900: #2B3D15;
+  --green-800: #38511E;
+  --green-700: #466621; /* press / brand text */
+  --green-600: #557E26; /* PRIMARY (olive CTA) */
+  --green-500: #6E9A3A;
+  --green-400: #8FB663;
+  --green-300: #B6CF92;
+  --green-200: #D7E3BD;
+  --green-100: #EBF1DB;
+  --green-50:  #F5F8EC;
+
+  /* ---- Persimmon (warm human accent / secondary CTA) ---- */
+  --coral-700: #C5421F;
+  --coral-600: #E2552C;
+  --coral-500: #F0623B; /* ACCENT */
+  --coral-300: #F7A488;
+  --coral-100: #FCE3D9;
+  --coral-50:  #FEF1EB;
+
+  /* ---- Amber (ratings, sunlight highlights) ---- */
+  --amber-700: #C77F12;
+  --amber-600: #E09A1F;
+  --amber-500: #F4B740; /* star rating fill */
+  --amber-100: #FCEFCF;
+
+  /* ---- Sky (info, links, map accents) ---- */
+  --sky-700: #235A93;
+  --sky-600: #2D6FB5;
+  --sky-100: #E1ECF7;
+
+  /* ---- Red (danger) ---- */
+  --red-700: #B23636;
+  --red-600: #D64545;
+  --red-100: #FBE3E3;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in components
+     ============================================================ */
+
+  /* Surfaces & background */
+  --color-bg:           var(--paper);
+  --color-bg-subtle:    var(--paper-2);
+  --surface-card:       var(--white);
+  --surface-raised:     var(--white);
+  --surface-sunken:     var(--ink-100);
+  --surface-inverse:    var(--ink-900);
+  --surface-brand:      var(--green-600);
+  --surface-brand-deep: var(--forest-800); /* splash, hero, dark bands */
+  --surface-brand-tint: var(--green-100);
+  --surface-accent-tint:var(--coral-100);
+
+  /* Text */
+  --text-strong:   var(--ink-900);
+  --text-body:     var(--ink-700);
+  --text-muted:    var(--ink-500);
+  --text-subtle:   var(--ink-400);
+  --text-inverse:  var(--white);
+  --text-brand:    var(--green-700);
+  --text-on-brand: var(--white);
+  --text-on-deep:  var(--paper);
+  --text-link:     var(--sky-600);
+
+  /* Borders */
+  --border-subtle:  var(--ink-100);
+  --border-default: var(--ink-150);
+  --border-strong:  var(--ink-200);
+  --border-focus:   var(--green-600);
+
+  /* Brand actions */
+  --brand-primary:        var(--green-600);
+  --brand-primary-hover:  var(--green-700);
+  --brand-primary-press:  var(--green-800);
+  --brand-primary-tint:   var(--green-100);
+  --brand-on-primary:     var(--white);
+
+  /* Accent (persimmon) */
+  --accent:        var(--coral-500);
+  --accent-hover:  var(--coral-600);
+  --accent-press:  var(--coral-700);
+  --accent-tint:   var(--coral-100);
+  --accent-on:     var(--white);
+
+  /* Status */
+  --rating:        var(--amber-500);
+  --info:          var(--sky-600);
+  --info-tint:     var(--sky-100);
+  --success:       var(--green-600);
+  --success-tint:  var(--green-100);
+  --warning:       var(--amber-600);
+  --warning-tint:  var(--amber-100);
+  --danger:        var(--red-600);
+  --danger-tint:   var(--red-100);
+
+  /* Focus ring (used as box-shadow) */
+  --focus-ring: 0 0 0 3px rgba(85, 126, 38, 0.32);
+  --focus-ring-accent: 0 0 0 3px rgba(240, 98, 59, 0.28);
+}

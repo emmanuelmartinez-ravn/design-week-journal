@@ -1,0 +1,54 @@
+/* ============================================================
+   VELLO · TYPOGRAPHY TOKENS
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --font-sans:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- Weights ---- */
+  --fw-regular:  400; /* @kind other */
+  --fw-medium:   500; /* @kind other */
+  --fw-semibold: 600; /* @kind other */
+  --fw-bold:     700; /* @kind other */
+  --fw-extra:    800; /* @kind other */
+
+  /* ---- Type scale (px) ---- */
+  --text-2xs:  11px;
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  38px;
+  --text-4xl:  48px;
+  --text-5xl:  60px;
+  --text-6xl:  76px;
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.05; /* @kind other */
+  --lh-snug:    1.18; /* @kind other */
+  --lh-normal:  1.45; /* @kind other */
+  --lh-relaxed: 1.6;  /* @kind other */
+
+  /* ---- Letter spacing ---- */
+  --ls-tight:   -0.02em; /* @kind other */
+  --ls-snug:    -0.01em; /* @kind other */
+  --ls-normal:  0;       /* @kind other */
+  --ls-wide:    0.04em;  /* @kind other */
+  --ls-wider:   0.12em;  /* @kind other */
+
+  /* ---- Semantic roles ---- */
+  --display-font:   var(--font-display);
+  --display-weight: var(--fw-bold);
+  --heading-font:   var(--font-display);
+  --heading-weight: var(--fw-semibold);
+  --body-font:      var(--font-sans);
+  --label-font:     var(--font-sans);
+  --label-weight:   var(--fw-semibold);
+  --mono-font:      var(--font-mono);
+}

@@ -1,0 +1,72 @@
+/* ============================================================
+   VELLO · BASE ELEMENT STYLES + TYPE UTILITIES
+   Ships with the system so every surface inherits the brand.
+   ============================================================ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--green-200); color: var(--ink-900); }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  color: var(--text-strong);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  margin: 0;
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+button { font-family: inherit; }
+
+/* ---- Display / heading utilities ---- */
+.v-display {
+  font-family: var(--display-font);
+  font-weight: var(--display-weight);
+  font-size: var(--text-5xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--text-strong);
+}
+.v-h1 { font-family: var(--heading-font); font-weight: var(--fw-bold); font-size: var(--text-4xl); line-height: var(--lh-snug); letter-spacing: var(--ls-snug); color: var(--text-strong); }
+.v-h2 { font-family: var(--heading-font); font-weight: var(--fw-semibold); font-size: var(--text-2xl); line-height: var(--lh-snug); letter-spacing: var(--ls-snug); color: var(--text-strong); }
+.v-h3 { font-family: var(--heading-font); font-weight: var(--fw-semibold); font-size: var(--text-xl); line-height: var(--lh-snug); color: var(--text-strong); }
+
+/* ---- Body ---- */
+.v-body    { font-size: var(--text-base); line-height: var(--lh-relaxed); color: var(--text-body); }
+.v-body-sm { font-size: var(--text-sm);   line-height: var(--lh-normal);  color: var(--text-body); }
+.v-muted   { color: var(--text-muted); }
+
+/* ---- Eyebrow / label ---- */
+.v-eyebrow {
+  font-family: var(--label-font);
+  font-weight: var(--fw-bold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--text-brand);
+}
+
+/* ---- Mono (data) ---- */
+.v-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
