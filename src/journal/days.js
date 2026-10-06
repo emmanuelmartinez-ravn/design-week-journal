@@ -48,6 +48,7 @@ export const days = [
       { id: 'friday-3', label: '5.3' },
       { id: 'friday-4', label: '5.4' },
       { id: 'friday-demo', label: 'Demo' },
+      { id: 'friday-checklists', label: 'Checklists' },
     ],
   },
 ];

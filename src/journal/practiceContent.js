@@ -19,6 +19,7 @@ import { Friday5_2 } from './content/Friday5_2.jsx';
 import { Friday5_3 } from './content/Friday5_3.jsx';
 import { Friday5_4 } from './content/Friday5_4.jsx';
 import { FridayDemo } from './content/FridayDemo.jsx';
+import { FridayChecklists } from './content/FridayChecklists.jsx';
 
 // Maps a practice id (from days.js) to the component that renders its
 // write-up. A practice with no entry here just falls back to an empty state.
@@ -44,4 +45,5 @@ export const practiceContent = {
   'friday-3': Friday5_3,
   'friday-4': Friday5_4,
   'friday-demo': FridayDemo,
+  'friday-checklists': FridayChecklists,
 };
