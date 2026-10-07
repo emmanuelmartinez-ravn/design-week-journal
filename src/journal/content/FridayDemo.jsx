@@ -85,10 +85,10 @@ const fidelityFindings = [
   },
   {
     topic: "Bottom nav badge color",
-    verdict: "Gap found",
-    variant: "danger",
+    verdict: "Fixed",
+    variant: "success",
     detail:
-      'The reference shows the Messages badge in green; `BottomNav`\'s own CSS hardcodes it to `--accent` (coral), with no prop to override it. Not fixable without editing the vendored component — left as-is and flagged rather than patched.',
+      'The reference shows the Messages badge in green; `BottomNav`\'s own CSS hardcodes it to `--accent` (coral), with no prop to override it. Fixed without editing the vendored component: `BottomNav` accepts a `className`, so a scoped rule in `index.css` sets the badge to `--brand-primary` on `--brand-on-primary`. White on olive measures about 4.8:1, passing AA, where white on coral measures about 3.2:1. The missing prop is still a gap in Vello itself.',
   },
   {
     topic: "Header and bottom nav scope",
@@ -247,7 +247,7 @@ export function FridayDemo() {
           </Button>
         </div>
 
-        <BottomNav items={NAV_ITEMS} value="home" />
+        <BottomNav items={NAV_ITEMS} value="home" className="friday-postrequest-mock__nav" />
       </div>
 
       <PracticeDivider />

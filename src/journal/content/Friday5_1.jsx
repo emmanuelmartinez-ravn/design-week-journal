@@ -73,7 +73,7 @@ const sections = [
       { property: "Text colour", value: "#466621", token: "--text-brand",
         why: "Was --green-700. --text-brand resolves to the same value, so the semantic alias wins." },
       { property: "Background", value: "#F5F8EC", token: "--green-50",
-        why: "No alias resolves to --green-50 (--brand-primary-tint is --green-100). Kept on the ramp; Vello is missing a lighter brand tint alias.", alias: true },
+        why: "No alias resolves to --green-50 (--brand-primary-tint and --success-tint are --green-100). Kept on the ramp; Vello is missing a lighter brand tint alias. The 5.2 build uses --success-tint, the nearest alias, until one exists.", alias: true },
       { property: "Corner radius", value: "999px", token: "--radius-pill" },
     ],
   },

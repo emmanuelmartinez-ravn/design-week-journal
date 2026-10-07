@@ -25,7 +25,7 @@ const decisions = [
   },
   {
     text: "Vello launches with dog-walking only, then expands.",
-    category: "UX",
+    category: "Product",
     impact: "Route",
   },
   {

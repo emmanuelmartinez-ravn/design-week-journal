@@ -4,8 +4,8 @@ import { PracticeDivider } from "../PracticeDivider";
 const questions = [
   {
     text: "Why do requesters drop off before completing a booking?",
-    paradigm: "Quantitative",
-    method: "Analytics",
+    paradigm: "Qualitative",
+    method: "Usability test",
     impact: "Event to log",
   },
   {
@@ -35,7 +35,7 @@ const questions = [
   {
     text: "Is our new onboarding flow easier than the old one?",
     paradigm: "Quantitative",
-    method: "Survey",
+    method: "Usability test",
     impact: "None",
   },
 ];

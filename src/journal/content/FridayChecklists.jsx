@@ -30,7 +30,7 @@ const handoffItems = [
   },
   {
     source: "Demo",
-    text: "A gap baked into a vendored component (BottomNav's hardcoded badge color) is named as a known exception, not patched.",
+    text: "A gap baked into a vendored component is named, and fixed from outside it (a scoped className override) when the component allows it, never by editing the vendored file. E.g. BottomNav's hardcoded badge color.",
   },
   {
     source: "5.3",

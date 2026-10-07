@@ -41,7 +41,7 @@ const auditFindings = [
     verdict: "Fixed",
     variant: "success",
     detail:
-      "Started on raw ramp tokens (--green-700 on --green-50), since no Badge variant pairs those exact shades. Swapped to the semantic aliases that resolve to the same text color and the nearest tint — --text-brand (green-700, exact) and --success-tint (green-100, one step darker than the observed green-50) — trading a barely-visible tint shift for zero raw-ramp references.",
+      "Started on raw ramp tokens (--green-700 on --green-50), since no Badge variant pairs those exact shades. Swapped to the semantic aliases that resolve to the same text color and the nearest tint — --text-brand (green-700, exact) and --success-tint (green-100, one step darker than the observed green-50) — trading a barely-visible tint shift for zero raw-ramp references. The exact --green-50 has no alias, which the 5.1 spec flags as a missing token.",
   },
 ];
 

@@ -551,3 +551,11 @@
   --_bgh: var(--danger-tint);
   --_bga: var(--danger-tint);
 }
+
+/* BottomNav hardcodes its badge to --accent with no prop; the reference
+   shows it in brand green. Overridden here via className instead of
+   editing the vendored component. */
+.friday-postrequest-mock__nav .vl-navitem__badge {
+  background: var(--brand-primary);
+  color: var(--brand-on-primary);
+}
