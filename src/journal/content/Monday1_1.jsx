@@ -26,6 +26,9 @@ const decisions = [
   {
     text: "Vello launches with dog-walking only, then expands.",
     category: "Product",
+    // Kept on the page so the correction stays visible.
+    firstAttempt: "UX",
+    relabelWhy: "Which services Vello launches with is a scope decision, not how someone gets a task done.",
     impact: "Route",
   },
   {
@@ -94,7 +97,18 @@ export function Monday1_1() {
       <ol className="practice-list">
         {decisions.map((d) => (
           <li key={d.text}>
-            <span className="practice-list__text">{d.text}</span>
+            <span className="practice-list__text">
+              {d.text}
+              {d.firstAttempt && (
+                <>
+                  <br />
+                  <span className="v-body-sm v-muted">
+                    <strong>Relabelled:</strong> first attempt was{" "}
+                    <s>{d.firstAttempt}</s>, now {d.category}. {d.relabelWhy}
+                  </span>
+                </>
+              )}
+            </span>
             <Badge className="practice-list__badge" variant={categoryVariant(d.category)}>
               {d.category}
             </Badge>
