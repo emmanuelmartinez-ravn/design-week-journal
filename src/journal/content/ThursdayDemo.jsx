@@ -129,6 +129,12 @@ export function ThursdayDemo() {
 
       <PassSection title="1. First pass (no AI)" groups={firstPass} />
       <PassSection title="2. Second pass (Claude)" groups={secondPass} />
+
+      <p className="v-body practice-doc__intro">
+        <strong>Why the second pass found more:</strong> Claude can analyze
+        the design system's token definitions in more depth, checking each
+        value on the screen against them.
+      </p>
     </div>
   );
 }

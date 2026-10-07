@@ -40,6 +40,17 @@ const questions = [
   },
 ];
 
+const paradigms = [
+  {
+    paradigm: "Quantitative",
+    why: "Tracked by numerical metrics.",
+  },
+  {
+    paradigm: "Qualitative",
+    why: "Descriptive: tracks experiences and behaviours.",
+  },
+];
+
 function paradigmVariant(paradigm) {
   return paradigm === "Qualitative" ? "brand" : "info";
 }
@@ -78,6 +89,23 @@ export function Tuesday2_1() {
           </li>
         ))}
       </ol>
+
+      <h3 className="v-h3 practice-doc__section">
+        What separates the two
+      </h3>
+      <ul className="practice-phase-list">
+        {paradigms.map((p) => (
+          <li key={p.paradigm}>
+            <Badge
+              className="practice-phase-list__phase"
+              variant={paradigmVariant(p.paradigm)}
+            >
+              {p.paradigm}
+            </Badge>
+            <span className="practice-phase-list__text">{p.why}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

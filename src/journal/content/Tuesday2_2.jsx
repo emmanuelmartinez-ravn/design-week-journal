@@ -29,12 +29,14 @@ const questions = [
     question: "How do you find and pay providers today?",
     yourVerdict: ["Well-formed"],
     claudeVerdict: ["Double-barreled"],
+    resolution: "Claude is right: it asks two questions at once (how they find providers, and how they pay them), so one answer can't tell you which part it's about.",
     rewrite: ["How do you find providers today?", "How do you pay providers today?"],
   },
   {
     question: "What frustrates you about TaskRabbit?",
     yourVerdict: ["Well-formed"],
     claudeVerdict: ["Leading"],
+    resolution: "Claude is right: it assumes the person has used TaskRabbit, and that the experience was frustrating.",
     rewrite: "What has your experience with TaskRabbit been like?",
   },
   {
@@ -95,6 +97,11 @@ export function Tuesday2_2() {
                 </div>
               )}
             </div>
+            {q.resolution && (
+              <p className="v-body practice-doc__intro">
+                <strong>Who's right:</strong> {q.resolution}
+              </p>
+            )}
             {q.rewrite && (
               <p className="v-body practice-doc__intro">
                 <strong>Rewrite:</strong>{" "}

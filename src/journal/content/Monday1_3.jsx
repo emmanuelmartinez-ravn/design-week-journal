@@ -17,6 +17,45 @@ const schema = `Booking {
   ???
 }`;
 
+// Contributions come from the Monday demo's "Engineering contributes" table;
+// Define keeps this practice's own schema-fork touchpoint.
+const phases = [
+  {
+    phase: "Discover",
+    contribution:
+      "Spike neighborhood boundary options (radius, postcode, building/block) before research starts.",
+    failure:
+      "Picking the boundary that's cheapest to query and presenting it as a fixed constraint, so research never tests what \"neighborhood\" means to residents.",
+  },
+  {
+    phase: "Define",
+    contribution:
+      "Draft a rough schema against each new requirement and surface the ??? forks (single vs. multi-payer booking) to product.",
+    failure:
+      "Silently resolving the fork yourself, e.g. a single provider_id because it's simpler, baking a scope decision into the data model.",
+  },
+  {
+    phase: "Architect",
+    contribution:
+      "Draft the ERD and the messaging real-time strategy alongside the flows.",
+    failure:
+      "Adding a rating_average column to Provider because it's the default, which picks a trust average over a trust graph before design weighs in on ProviderCard.",
+  },
+  {
+    phase: "Design",
+    contribution:
+      "Benchmark asset weights and map the geo-permission flow before screens are drawn.",
+    failure:
+      "Asking for location permission on first launch because the query needs it, turning a design decision (when to ask, and why) into an engineering default.",
+  },
+  {
+    phase: "Validate",
+    contribution: "Instrument analytics before testing starts.",
+    failure:
+      "Tracking only what's easy (page views, taps) instead of the events that test Vello's bet, like whether \"trusted by 3 neighbors\" changes who gets booked.",
+  },
+];
+
 export function Monday1_3() {
   return (
     <div className="practice-doc">
@@ -120,6 +159,34 @@ export function Monday1_3() {
         silently becoming "just a payment request" with no say for the roommate
         at all.
       </p>
+
+      <h3 className="v-h3 practice-doc__section">
+        Phase → contribution → failure mode
+      </h3>
+      <p className="v-body practice-doc__intro">
+        The same pattern across all five phases. This table seeds the Friday
+        engineering design-support checklist.
+      </p>
+      <table className="practice-table">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>My contribution</th>
+            <th>My failure mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          {phases.map((row) => (
+            <tr key={row.phase}>
+              <td>
+                <Badge variant="brand">{row.phase}</Badge>
+              </td>
+              <td>{row.contribution}</td>
+              <td>{row.failure}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

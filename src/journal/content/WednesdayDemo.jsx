@@ -113,7 +113,10 @@ export function WednesdayDemo() {
       <ol className="practice-doc__list">
         <li>
           Pick one Vello core task: post a request, respond as a provider, or
-          verify a provider as admin. <strong>Chosen: post a request.</strong>
+          verify a provider as admin. <strong>Chosen: post a request.</strong>{" "}
+          It's a core part of the requester's flow in the app, so it has to
+          be clear enough for requesters to fill in completely in a short
+          time. That leads to fewer abandoned requests.
         </li>
         <li>
           Ask Claude to draft the full user flow as a diagram artifact —

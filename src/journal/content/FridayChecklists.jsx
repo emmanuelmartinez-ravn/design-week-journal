@@ -10,7 +10,7 @@ const handoffItems = [
   },
   {
     source: "5.2",
-    text: "Values that fall between token steps are rounded to the nearest step, and the rounding is written down (e.g. 15px padding → Card padding=\"sm\", 14px).",
+    text: "Values that fall between token steps are rounded to the nearest step, and the rounding is written down. When two steps are equally close (15px padding: 14px or 16px), the designer picks.",
   },
   {
     source: "5.4",
@@ -45,6 +45,11 @@ const handoffItems = [
 const supportItems = [
   {
     phase: "Discover",
+    source: "1.3",
+    text: "Spike neighborhood boundary options before research starts, and let research test them instead of presenting the cheapest one to query as fixed.",
+  },
+  {
+    phase: "Discover",
     source: "Tue",
     text: "Turn verified research themes into the entities and attributes they imply, so the data model starts from what users said, not from what was easy to store.",
   },
@@ -52,6 +57,11 @@ const supportItems = [
     phase: "Define",
     source: "1.3",
     text: "Draft a rough schema against each new requirement and surface the open forks (the ??? fields) to product, instead of quietly picking the cheaper option.",
+  },
+  {
+    phase: "Architect",
+    source: "1.3",
+    text: "Draft the ERD and the real-time messaging strategy alongside the flows, without defaulting a trust primitive (a rating_average column) before design weighs in.",
   },
   {
     phase: "Architect",
@@ -65,6 +75,11 @@ const supportItems = [
   },
   {
     phase: "Design",
+    source: "1.3",
+    text: "Benchmark asset weights and map the location-permission flow before screens are drawn, and leave when to ask for location to design.",
+  },
+  {
+    phase: "Design",
     source: "4.2",
     text: "Audit the components a screen is built from for accessibility (labels, aria-describedby, contrast, target size) before they spread into new screens.",
   },
@@ -72,6 +87,11 @@ const supportItems = [
     phase: "Design",
     source: "4.3",
     text: "Check the screen's values against the token set and report the gaps the system is missing, so the fix lands in the system rather than in one screen.",
+  },
+  {
+    phase: "Validate",
+    source: "1.3",
+    text: "Instrument analytics before testing, around the events that test Vello's bet (does \"trusted by 3 neighbors\" change who gets booked?), not just page views and taps.",
   },
   {
     phase: "Validate",
@@ -119,9 +139,9 @@ export function FridayChecklists() {
         Engineering design-support checklist
       </h3>
       <p className="v-body practice-doc__intro">
-        One or more contributions per design phase, starting from the
-        Define touchpoint in Practice 1.3 and filled in with what the rest
-        of the week actually did.
+        Each phase starts from its row in the Monday 1.3 table, written to
+        avoid that row's failure mode, then adds what the rest of the week
+        grew from it.
       </p>
       <ul className="practice-phase-list">
         {supportItems.map((item) => (

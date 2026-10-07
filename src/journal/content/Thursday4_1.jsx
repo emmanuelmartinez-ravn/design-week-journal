@@ -5,6 +5,7 @@ const rankings = [
   {
     rank: 1,
     title: "Your Open Request card",
+    why: "Ranks above the provider card because of position: when you open the app it sits centered on screen, while the provider card sits at the bottom.",
     cues: [
       { mechanism: "Scale", detail: "Occupies at least 1/3 of the screen" },
       { mechanism: "Weight", detail: "Uses semibold weight" },
@@ -23,6 +24,7 @@ const rankings = [
       { mechanism: "Scale", detail: "Occupies at least 1/3 of the screen" },
       { mechanism: "Weight", detail: "Uses semibold weight" },
       { mechanism: "Color", detail: "Has the biggest image on screen" },
+      { mechanism: "Position", detail: "Sits at the bottom of the screen" },
     ],
     tokensBehind: "Size, text weight, role colors, text colors",
     oneOff: '"from $24 / walk" text',
@@ -85,6 +87,11 @@ export function Thursday4_1() {
                 <p className="v-body-sm v-muted">
                   Tokens behind: {r.tokensBehind}
                 </p>
+                {r.why && (
+                  <p className="v-body-sm">
+                    <strong>Why #{r.rank}:</strong> {r.why}
+                  </p>
+                )}
                 {r.oneOff && (
                   <p className="v-body-sm v-muted">One-off: {r.oneOff}</p>
                 )}

@@ -55,6 +55,26 @@ const decisions = [
   },
 ];
 
+// Ordered top to bottom: each layer works inside what the one above decided.
+const layers = [
+  {
+    category: "Product",
+    why: "Decides what Vello is and why it exists: who it serves, what it offers, how it makes money.",
+  },
+  {
+    category: "UX",
+    why: "Decides how someone gets a task done within what Product set: the steps, their order, and the gates between them.",
+  },
+  {
+    category: "UI",
+    why: "Decides how one screen is laid out to support that path: which components, in what arrangement.",
+  },
+  {
+    category: "Visual",
+    why: "Decides how the UI looks: colour, type, spacing.",
+  },
+];
+
 export function Monday1_1() {
   return (
     <div className="practice-doc">
@@ -87,6 +107,23 @@ export function Monday1_1() {
           </li>
         ))}
       </ol>
+
+      <h3 className="v-h3 practice-doc__section">
+        What separates the four, from Product down to Visual
+      </h3>
+      <ul className="practice-phase-list">
+        {layers.map((layer) => (
+          <li key={layer.category}>
+            <Badge
+              className="practice-phase-list__phase"
+              variant={categoryVariant(layer.category)}
+            >
+              {layer.category}
+            </Badge>
+            <span className="practice-phase-list__text">{layer.why}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
