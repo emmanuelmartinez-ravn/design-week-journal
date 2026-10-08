@@ -160,9 +160,3 @@ Wednesday 3.1, 3.2 and 3.3; Thursday 4.2; Friday 5.3 and 5.4.
 - **Engineering design-support checklist:** one item per phase, seeded from
   the Monday 1.3 table and written to avoid that row's failure mode. More
   items grew from Tuesday, 3.3, Wednesday, 4.2, 4.3, 5.1 and 5.4.
-
----
-
-## Still open
-
-- **#3 Published site:** ask a mentor which correction they meant.
