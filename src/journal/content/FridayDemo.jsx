@@ -91,6 +91,13 @@ const fidelityFindings = [
       'The reference shows the Messages badge in green; `BottomNav`\'s own CSS hardcodes it to `--accent` (coral), with no prop to override it. Fixed without editing the vendored component: `BottomNav` accepts a `className`, so a scoped rule in `index.css` sets the badge to `--brand-primary` on `--brand-on-primary`. White on olive measures about 4.8:1, passing AA, where white on coral measures about 3.2:1. The missing prop is still a gap in Vello itself.',
   },
   {
+    topic: "Accessibility — placeholder contrast",
+    verdict: "Fixed",
+    variant: "success",
+    detail:
+      "`Input` ships its placeholder in `--text-subtle`, which measures 3.30:1 on the white field and fails AA (4.5:1). The same contrast failure Thursday 4.2 found. The textarea and the character counter copied that token, so they failed too (the counter at 2.95:1 on the cream page). Fixed without editing the vendored component: a scoped rule in `index.css` sets all three to `--text-muted`, which measures 5.04:1 on white and 4.51:1 on cream. The default in `Input` itself is still a gap in Vello.",
+  },
+  {
     topic: "Header and bottom nav scope",
     verdict: "Out of scope",
     variant: "neutral",

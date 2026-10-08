@@ -528,15 +528,18 @@
   box-shadow: var(--focus-ring);
 }
 
+/* Input's placeholder ships as --text-subtle, 3.30:1 on white (fails AA).
+   --text-muted passes at 5.04:1. Overridden here, not in the vendored file. */
+.friday-postrequest-mock .vl-input::placeholder,
 .friday-postrequest-mock__textarea::placeholder {
-  color: var(--text-subtle);
+  color: var(--text-muted);
 }
 
 .friday-postrequest-mock__counter {
   align-self: flex-end;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--text-subtle);
+  color: var(--text-muted);
 }
 
 .friday-postrequest-mock__actions {
