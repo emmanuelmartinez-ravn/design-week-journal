@@ -165,5 +165,4 @@ Wednesday 3.1, 3.2 and 3.3; Thursday 4.2; Friday 5.3 and 5.4.
 
 ## Still open
 
-- **#3 Published site:** ask a mentor which correction they meant, then
-  merge, redeploy, and compare the live bundle against the repo again.
+- **#3 Published site:** ask a mentor which correction they meant.
